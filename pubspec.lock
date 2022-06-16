@@ -54,11 +54,11 @@ packages:
     dependency: "direct main"
     description:
       path: flare_flutter
-      ref: HEAD
-      resolved-ref: e90219f457602c61afee0b5f6cec2d66bd395e01
-      url: "https://github.com/tsinis/Flare-Flutter"
+      ref: stable
+      resolved-ref: ecd35f911b12460141c4bd49422c4a29cda04d30
+      url: "https://github.com/mdpe-ir/Flare-Flutter"
     source: git
-    version: "3.0.2"
+    version: "3.0.5"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -152,4 +152,4 @@ packages:
     source: hosted
     version: "2.1.2"
 sdks:
-  dart: ">=2.17.0-0 <3.0.0"
+  dart: ">=2.17.0 <3.0.0"

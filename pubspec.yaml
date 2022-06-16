@@ -13,8 +13,9 @@ dependencies:
     sdk: flutter
   flare_flutter:
     git:
-      url: https://github.com/tsinis/Flare-Flutter
-      path: flare_flutter/
+      url: https://github.com/mdpe-ir/Flare-Flutter
+      path: flare_flutter
+      ref: stable
 
 dev_dependencies:
   flutter_test:
