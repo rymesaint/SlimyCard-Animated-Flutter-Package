@@ -3,13 +3,18 @@ description: It provides a beautiful slime-like animation of a Card that separat
 version: 1.0.4
 homepage: https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project
 
+publish_to: none
+
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.16.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flare_flutter: ^2.0.3
+  flare_flutter:
+    git:
+      url: https://github.com/tsinis/Flare-Flutter
+      path: flare_flutter/
 
 dev_dependencies:
   flutter_test:

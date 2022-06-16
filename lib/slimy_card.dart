@@ -31,8 +31,8 @@ class SlimyCard extends StatefulWidget {
   final double topCardHeight;
   final double bottomCardHeight;
   final double borderRadius;
-  final Widget topCardWidget;
-  final Widget bottomCardWidget;
+  final Widget? topCardWidget;
+  final Widget? bottomCardWidget;
   final bool slimeEnabled;
 
   SlimyCard({
@@ -56,22 +56,22 @@ class SlimyCard extends StatefulWidget {
 }
 
 class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
-  bool isSeperated;
+  late bool isSeperated;
 
-  double bottomDimension;
-  double initialBottomDimension;
-  double finalBottomDimension;
-  double gap;
-  double gapInitial;
-  double gapFinal;
-  double x;
-  double y;
-  String activeAnimation;
-  Widget topCardWidget;
-  Widget bottomCardWidget;
+  late double bottomDimension;
+  late double initialBottomDimension;
+  late double finalBottomDimension;
+  late double gap;
+  late double gapInitial;
+  late double gapFinal;
+  late double x;
+  late double y;
+  late String activeAnimation;
+  Widget? topCardWidget;
+  Widget? bottomCardWidget;
 
-  Animation<double> arrowAnimation;
-  AnimationController arrowAnimController;
+  late Animation<double> arrowAnimation;
+  late AnimationController arrowAnimController;
 
   /// `action` is the main function that triggers the process of separation of
   /// the cards and vice-versa.
@@ -104,10 +104,10 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
     initialBottomDimension = 100;
     finalBottomDimension = widget.bottomCardHeight;
     bottomDimension = initialBottomDimension;
-    topCardWidget = (widget.topCardWidget != null)
+    topCardWidget = widget.topCardWidget != null
         ? widget.topCardWidget
         : simpleTextWidget('This is Top Card Widget.');
-    bottomCardWidget = (widget.bottomCardWidget != null)
+    bottomCardWidget = widget.bottomCardWidget != null
         ? widget.bottomCardWidget
         : simpleTextWidget('This is Bottom Card Widget.');
     arrowAnimController = AnimationController(
@@ -305,6 +305,6 @@ class StatusBloc {
   Stream<bool> get stream => statusController.stream;
 
   dispose() {
-    statusController?.close();
+    statusController.close();
   }
 }
