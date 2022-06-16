@@ -1,6 +1,6 @@
 name: slimy_card
 description: It provides a beautiful slime-like animation of a Card that separates into two.
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/AkashDivya/SlimyCard-Animated-Flutter-Project
 
 publish_to: none
@@ -18,6 +18,7 @@ dependencies:
       ref: stable
 
 dev_dependencies:
+  flutter_lints: ^1.0.4
   flutter_test:
     sdk: flutter
 
